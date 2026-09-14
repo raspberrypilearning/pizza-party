@@ -8,7 +8,7 @@ Add a helper that makes pizzas every second, even when the player stops clicking
 >
 > <img src="images/chef.png" alt="The demo project's chef helper." width="300" height="300" style="object-fit: contain;">
 >
-> Use your own helper, or save [the chef sprite](images/chef.png) and import it with **Upload**.
+> Use your own helper, or save [the chef sprite](images/chef-sprite.png) and import it with **Upload**.
 
 > [!TASK]
 >

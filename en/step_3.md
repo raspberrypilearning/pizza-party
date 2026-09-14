@@ -45,7 +45,7 @@ Nothing changes yet, because `pizzas per click`{:class="block3variables"} is sti
 >
 > Add your first piece of equipment as a new sprite. Choose something that looks like it would improve each click, such as a tool, machine, power-up, or badge. The demo project uses a cutter.
 >
-> Use your own equipment, or save [the cutter sprite](images/cutter.png) and import it with **Upload**.
+> Use your own equipment, or save [the cutter sprite](images/cutter-sprite.png) and import it with **Upload**.
 >
 > ![The demo project's cutter.](images/cutter.png)
 

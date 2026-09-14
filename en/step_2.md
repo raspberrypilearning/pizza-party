@@ -20,7 +20,7 @@ Add something to click and a score that goes up when you click it.
 >
 > Choose one clear thing players can click lots of times, such as food, treasure, a mascot, a ball, or something you draw yourself. The demo project uses a pizza.
 >
-> Use your own sprite, or save [the pizza sprite](images/pizza.png) and import it with **Upload**.
+> Use your own sprite, or save [the pizza sprite](images/pizza-sprite.png) and import it with **Upload**.
 >
 > ![The demo project's pizza sprite.](images/pizza.png)
 

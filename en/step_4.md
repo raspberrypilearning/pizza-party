@@ -8,7 +8,7 @@ Build on the cutter prototype with two more upgrades that make every click worth
 >
 > ![The demo project's rolling pin.](images/rolling_pin.png)
 >
-> Use your own equipment, or save [the rolling pin sprite](images/rolling_pin.png) and import it with **Upload**.
+> Use your own equipment, or save [the rolling pin sprite](images/rolling-pin-sprite.png) and import it with **Upload**.
 
 > [!TASK]
 >
@@ -63,7 +63,7 @@ Click until the score reaches 500. The rolling pin appears; click it to buy it a
 >
 > ![The demo project's oven.](images/oven.png)
 >
-> Use your own equipment, or save [the oven sprite](images/oven.png) and import it with **Upload**.
+> Use your own equipment, or save [the oven sprite](images/oven-sprite.png) and import it with **Upload**.
 
 > [!TASK]
 >

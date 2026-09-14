@@ -8,7 +8,7 @@ Add a second, more powerful helper that makes five pizzas per second instead of 
 >
 > ![The demo project's granny helper.](images/granny.png)
 >
-> Use your own helper, or save [the granny sprite](images/granny.png) and import it with **Upload**.
+> Use your own helper, or save [the granny sprite](images/granny-sprite.png) and import it with **Upload**.
 
 > [!TASK]
 >
