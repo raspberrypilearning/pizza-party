@@ -26,7 +26,7 @@ Build on the cutter prototype with two more upgrades that make every click worth
 >
 > > [!NOPRINT]
 > >
-> > ![Copying the cutter scripts onto the rolling pin and oven sprites.](images/copy-equipment-scripts.gif)
+> > ![Dragging scripts from the code area onto another sprite to copy them.](images/copy-equipment-scripts.gif)
 
 > [!TASK]
 >
@@ -77,7 +77,7 @@ Click until the score reaches 500. The rolling pin appears; click it to buy it a
 
 > [!TASK]
 >
-> Copy the cutter's two scripts onto the oven by dragging each script onto the oven in the sprite list. Add the `Alert`{:class="block3sound"} and `Tada`{:class="block3sound"} sounds too.
+> Copy the rolling pin's two scripts onto the oven by dragging each script onto the oven in the sprite list. Add the `Alert`{:class="block3sound"} and `Tada`{:class="block3sound"} sounds too.
 
 > [!TASK]
 >

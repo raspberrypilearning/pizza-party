@@ -24,7 +24,7 @@
     <rect y="68" width="286" height="34" rx="5" fill="#ff8c1a"/>
     <text x="16" y="91" font-family="Arial, sans-serif" font-size="15" fill="#ffffff">change pizzas by cost</text>
     <rect y="100" width="252" height="34" rx="5" fill="#ff8c1a"/>
-    <text x="16" y="123" font-family="Arial, sans-serif" font-size="15" fill="#ffffff">change helpers by 1</text>
+    <text x="16" y="123" font-family="Arial, sans-serif" font-size="15" fill="#ffffff">change chefs by 1</text>
   </g>
 
   <g transform="translate(44 282)">

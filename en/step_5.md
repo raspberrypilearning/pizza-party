@@ -22,11 +22,11 @@ Add a helper that makes pizzas every second, even when the player stops clicking
 
 > [!TASK]
 >
-> Make a variable called `helpers`{:class="block3variables"}. This stores how many of this first helper the player has hired.
+> Make a variable called `chefs`{:class="block3variables"}. This stores how many chefs the player has hired.
 
 > [!TASK]
 >
-> Make a variable called `helper price`{:class="block3variables"}. It stores how many pizzas the next helper costs.
+> Make a variable called `chef price`{:class="block3variables"}. It stores how many pizzas the next chef costs.
 
 > [!TASK]
 >
@@ -44,26 +44,26 @@ Add a helper that makes pizzas every second, even when the player stops clicking
 > when green flag clicked
 > set [pizzas v] to (0)
 > set [pizzas per click v] to (1)
-> +set [helpers v] to (0)
-> +set [helper price v] to (50)
+> +set [chefs v] to (0)
+> +set [chef price v] to (50)
 > +set [pizzas per second v] to (0)
 > ```
 
-Click the green flag. The new readouts should show `helpers 0`, `helper price 50`, and `pizzas per second 0`.
+Click the green flag. The new readouts should show `chefs 0`, `chef price 50`, and `pizzas per second 0`.
 
 > [!TASK]
 >
 > On the helper sprite, start its buy script. Clicking the helper spends its current price and hires one helper.
 >
-> The `change`{:class="block3variables"} block needs a negative number to spend pizzas. `0 - helper price` turns the price into that negative number.
+> The `change`{:class="block3variables"} block needs a negative number to spend pizzas. `0 - chef price` turns the price into that negative number.
 >
 > <p align="center"><img src="images/chef.png" alt="Chef sprite icon." width="96" height="96" style="object-fit: contain;"></p>
 >
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizzas v] by ((0) - (helper price))
-> change [helpers v] by (1)
+> change [pizzas v] by ((0) - (chef price))
+> change [chefs v] by (1)
 > ```
 
 > [!TASK]
@@ -75,12 +75,12 @@ Click the green flag. The new readouts should show `helpers 0`, `helper price 50
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizzas v] by ((0) - (helper price))
-> change [helpers v] by (1)
-> +set [helper price v] to (round ((helper price) * (1.15)))
+> change [pizzas v] by ((0) - (chef price))
+> change [chefs v] by (1)
+> +set [chef price v] to (round ((chef price) * (1.15)))
 > ```
 
-The first helper costs 50 pizzas. After buying it, `helpers` should be `1` and `helper price` should be `58`.
+The first helper costs 50 pizzas. After buying it, `chefs` should be `1` and `chef price` should be `58`.
 
 > [!TIP]
 >
@@ -90,7 +90,7 @@ The first helper costs 50 pizzas. After buying it, `helpers` should be `1` and `
 >
 > Make the helper appear only when the player can afford the current price.
 >
-> Scratch has no `greater than or equal to` block. Because the score uses whole numbers, checking for `pizzas > helper price - 1` does the same thing.
+> Scratch has no `greater than or equal to` block. Because the score uses whole numbers, checking for `pizzas > chef price - 1` does the same thing.
 >
 > <p align="center"><img src="images/chef.png" alt="Chef sprite icon." width="96" height="96" style="object-fit: contain;"></p>
 >
@@ -99,7 +99,7 @@ The first helper costs 50 pizzas. After buying it, `helpers` should be `1` and `
 > set drag mode [not draggable v]
 > hide
 > forever
-> if <(pizzas) > ((helper price) - (1))> then
+> if <(pizzas) > ((chef price) - (1))> then
 > show
 > else
 > hide
@@ -113,7 +113,7 @@ Click the green flag and click the main sprite. The helper should stay hidden up
 >
 > Click the `Stage`{:class="block3looks"}. In `My Blocks`{:class="block3custom"}, click **Make a Block**, name it `update pizzas per second`{:class="block3custom"}, and build its definition.
 >
-> Each helper makes one pizza per second, so the rate is the same as the number stored in `helpers`{:class="block3variables"}.
+> Each chef makes one pizza per second, so the rate is the same as the number stored in `chefs`{:class="block3variables"}.
 >
 > ![Selecting the Stage, to the right of the sprite list.](images/select-stage.png)
 >
@@ -121,7 +121,7 @@ Click the green flag and click the main sprite. The helper should stay hidden up
 >
 > ```blocks3
 > define update pizzas per second
-> set [pizzas per second v] to (helpers)
+> set [pizzas per second v] to (chefs)
 > ```
 
 > [!TIP]
@@ -146,9 +146,9 @@ Click the green flag and click the main sprite. The helper should stay hidden up
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizzas v] by ((0) - (helper price))
-> change [helpers v] by (1)
-> set [helper price v] to (round ((helper price) * (1.15)))
+> change [pizzas v] by ((0) - (chef price))
+> change [chefs v] by (1)
+> set [chef price v] to (round ((chef price) * (1.15)))
 > +broadcast (update v)
 > ```
 
@@ -160,8 +160,8 @@ Click the green flag and click the main sprite. The helper should stay hidden up
 > when green flag clicked
 > set [pizzas v] to (0)
 > set [pizzas per click v] to (1)
-> set [helpers v] to (0)
-> set [helper price v] to (50)
+> set [chefs v] to (0)
+> set [chef price v] to (50)
 > update pizzas per second :: custom
 > forever
 > wait (1) seconds
@@ -173,6 +173,6 @@ Click the green flag and click the main sprite. The helper should stay hidden up
 >
 > A regular moment when a game updates its numbers is called a **tick**. This clicker has one tick every second.
 
-Click the green flag, earn 50 pizzas, and buy one helper. Check that `helpers` becomes `1` and `pizzas per second` becomes `1`, then stop clicking. The score should rise by one every second.
+Click the green flag, earn 50 pizzas, and buy one helper. Check that `chefs` becomes `1` and `pizzas per second` becomes `1`, then stop clicking. The score should rise by one every second.
 
 The helper is a repeatable upgrade. When the score reaches its new price, the same sprite appears again so the player can hire another one.

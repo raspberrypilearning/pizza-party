@@ -20,7 +20,7 @@ Add a second, more powerful helper that makes five pizzas per second instead of 
 >
 > > [!NOPRINT]
 > >
-> > ![Copying the chef helper scripts onto the granny helper.](images/copy-helper-scripts.svg)
+> > ![Copying the chef helper scripts onto the granny helper.](images/copy-helper-scripts.png)
 
 > [!TASK]
 >
@@ -44,8 +44,8 @@ Add a second, more powerful helper that makes five pizzas per second instead of 
 > when green flag clicked
 > set [pizzas v] to (0)
 > set [pizzas per click v] to (1)
-> set [helpers v] to (0)
-> set [helper price v] to (50)
+> set [chefs v] to (0)
+> set [chef price v] to (50)
 > +set [grannies v] to (0)
 > +set [granny price v] to (100)
 > update pizzas per second :: custom
@@ -99,13 +99,13 @@ Click the green flag and build the score. The first helper should appear at 50 p
 >
 > On the `Stage`{:class="block3looks"}, update the `update pizzas per second`{:class="block3custom"} definition.
 >
-> The number of first helpers is already their contribution because each makes one pizza per second. Each granny makes five, so multiply only `grannies`{:class="block3variables"} by `5`.
+> The number of chefs is already their contribution because each makes one pizza per second. Each granny makes five, so multiply only `grannies`{:class="block3variables"} by `5`.
 >
 > ![Selecting the Stage, to the right of the sprite list.](images/select-stage.png)
 >
 > ```blocks3
 > define update pizzas per second
-> set [pizzas per second v] to ((helpers) + ((grannies) * (5)))
+> set [pizzas per second v] to ((chefs) + ((grannies) * (5)))
 > ```
 
 > [!TIP]
