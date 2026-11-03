@@ -1,1 +1,21 @@
 pizzas
+
+pizzas per click
+
+New equipment unlocked!
+
+You win!
+
+chefs
+
+chef price
+
+pizzas per second
+
+update pizzas per second
+
+update
+
+grannies
+
+granny price
