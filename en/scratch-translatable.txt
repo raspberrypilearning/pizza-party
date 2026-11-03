@@ -19,3 +19,7 @@ update
 grannies
 
 granny price
+
+Right-click the costume
+
+Choose duplicate to make the bought version.
