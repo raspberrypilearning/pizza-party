@@ -1,0 +1,21 @@
+title: Pizza Party
+hero_image: images/banner.png
+description: Realizza un gioco pizza-clicker in questo progetto arcade di Code Club.
+listed: true
+pdf: false
+steps:
+  - title: Cosa creerai
+  - title: Crea il clicker
+    completion:
+      - engaged
+  - title: Aggiungi il primo equipaggiamento
+  - title: Aggiungi altro equipaggiamento
+  - title: Aggiungi un aiutante
+    completion:
+      - internal
+  - title: Aggiungi un secondo aiutante
+  - title: Aggiungere uno sfondo
+    completion:
+      - external
+  - title: Rendi animato l'equipaggiamento
+  - title: Rendi animati gli aiutanti
