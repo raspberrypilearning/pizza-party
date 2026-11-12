@@ -42,20 +42,20 @@ Aggiungi un secondo aiutante più potente che prepara cinque pizze al secondo in
 >
 > ```blocks3
 > when green flag clicked
-> set [pizzas v] to (0)
-> set [pizzas per click v] to (1)
-> set [chefs v] to (0)
-> set [chef price v] to (50)
-> +set [grannies v] to (0)
-> +set [granny price v] to (100)
-> update pizzas per second :: custom
+> set [pizze v] to (0)
+> set [pizze per clic v] to (1)
+> set [chef v] to (0)
+> set [prezzo chef v] to (50)
+> +set [nonne v] to (0)
+> +set [prezzo della nonna v] to (100)
+> aggiorna pizze al secondo :: custom
 > forever
 > wait (1) seconds
-> change [pizzas v] by (pizzas per second)
+> change [pizze v] by (pizze al secondo)
 > end
 > ```
 
-Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `nonne 0` e `prezzo delle nonne 100`.
+Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `nonne 0` e `prezzo della nonna 100`.
 
 > [!TASK]
 >
@@ -68,10 +68,10 @@ Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `nonne 0` 
 > ```blocks3
 > when this sprite clicked
 > start sound (Collect v)
-> change [pizzas v] by ((0) - (granny price))
-> change [grannies v] by (1)
-> set [granny price v] to (round ((granny price) * (1.15)))
-> broadcast (update v)
+> change [pizze v] by ((0) - (prezzo della nonna))
+> change [nonne v] by (1)
+> set [prezzo della nonna v] to (round ((prezzo della nonna) * (1.15)))
+> broadcast (aggiorna v)
 > ```
 
 > [!TASK]
@@ -85,7 +85,7 @@ Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `nonne 0` 
 > set drag mode [not draggable v]
 > hide
 > forever
-> if <(pizzas) > ((granny price) - (1))> then
+> if <(pizze) > ((prezzo della nonna) - (1))> then
 > show
 > else
 > hide
@@ -104,8 +104,8 @@ Clicca sulla bandierina verde e fai salire il punteggio. Il primo aiutante dovre
 > ![Selezione dello Stage, a destra dell'elenco degli sprite.](images/select-stage.png)
 >
 > ```blocks3
-> define update pizzas per second
-> set [pizzas per second v] to ((chefs) + ((grannies) * (5)))
+> define aggiorna pizze al secondo
+> set [pizze al secondo v] to ((chef) + ((nonne) * (5)))
 > ```
 
 > [!TIP]

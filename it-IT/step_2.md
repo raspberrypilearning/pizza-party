@@ -42,7 +42,7 @@ Aggiungi un elemento su cui cliccare e un punteggio che aumenta a ogni clic.
 >
 > ```blocks3
 > when this sprite clicked
-> change [pizzas v] by (1)
+> change [pizze v] by (1)
 > ```
 
 Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
@@ -58,7 +58,7 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 > ```blocks3
 > when this sprite clicked
 > +start sound (Tennis Hit v)
-> change [pizzas v] by (1)
+> change [pizze v] by (1)
 > ```
 
 > [!TIP]
@@ -74,7 +74,7 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 > ```blocks3
 > when this sprite clicked
 > start sound (Tennis Hit v)
-> change [pizzas v] by (1)
+> change [pizze v] by (1)
 > +change size by (10)
 > +wait (0.05) seconds
 > +change size by (-10)
@@ -104,12 +104,12 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 > Aggiungi la **condizione di vittoria** allo stesso script. Aspetta che il punteggio sia abbastanza alto, poi festeggia.
 >
 > ```blocks3
-> quando si clicca su bandierina verde
-> rendi lo sprite [non trascinabile v]
-> +attendi fino a quando <(pizze) > (10000)>
-> +avvia riproduzione suono (Win v)
-> +dire [Hai Vinto!] per (2) secondi
-> +ferma [tutto v]
+> when green flag clicked
+> set drag mode [not draggable v]
+> +wait until <(pizze) > (10000)>
+> +start sound (Win v)
+> +say [Hai vinto!] for (2) seconds
+> +stop [tutto v]
 > ```
 
 > [!TIP]
@@ -124,7 +124,7 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 >
 > ```blocks3
 > when green flag clicked
-> set [pizzas v] to (0)
+> set [pizze v] to (0)
 > ```
 
 > [!TASK]

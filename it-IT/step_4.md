@@ -39,18 +39,18 @@ Parti dal prototipo della taglierina con altri due potenziamenti che rendono ogn
 > set drag mode [not draggable v]
 > switch costume to (rolling_pin v)
 > hide
-> wait until <(pizzas) > (499)>
+> wait until <(pizze) > (499)>
 > show
 > start sound (Alert v)
-> say [New equipment unlocked!] for (2) seconds
+> say [Nuovo equipaggiamento sbloccato!] for (2) seconds
 > ```
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizzas) > (499)>> then
+> if <<(costume [number v]) = (1)> and <(pizze) > (499)>> then
 > start sound (Tada v)
-> change [pizzas v] by (-500)
-> set [pizzas per click v] to (6)
+> change [pizze v] by (-500)
+> set [pizze per clic v] to (6)
 > next costume
 > end
 > ```
@@ -81,7 +81,7 @@ Clicca fino a quando il punteggio raggiunge 500. Il mattarello appare; cliccaci 
 
 > [!TASK]
 >
-> Aggiorna gli script copiati per il forno. Costa `3000` e porta `pizze per clic`{:class="block3variables"} a `24`.
+> Aggiorna gli script copiati per il forno. Costa `3000` e porta `pizze per click`{:class="block3variables"} a `24`.
 >
 > <p align="center"><img src="images/oven.png" alt="Oven sprite icon." width="96" height="96" style="object-fit: contain;"></p>
 >
@@ -90,18 +90,18 @@ Clicca fino a quando il punteggio raggiunge 500. Il mattarello appare; cliccaci 
 > set drag mode [not draggable v]
 > switch costume to (oven v)
 > hide
-> wait until <(pizzas) > (2999)>
+> wait until <(pizze) > (2999)>
 > show
 > start sound (Alert v)
-> say [New equipment unlocked!] for (2) seconds
+> say [Nuovo equipaggiamento sbloccato!] for (2) seconds
 > ```
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizzas) > (2999)>> then
+> if <<(costume [number v]) = (1)> and <(pizze) > (2999)>> then
 > start sound (Tada v)
-> change [pizzas v] by (-3000)
-> set [pizzas per click v] to (24)
+> change [pizze v] by (-3000)
+> set [pizze per clic v] to (24)
 > next costume
 > end
 > ```
@@ -110,17 +110,17 @@ Clicca fino a quando il punteggio raggiunge 3000. Acquista il forno e verifica c
 
 > [!TASK]
 >
-> Per vincere, fai in modo che un giocatore abbia bisogno di ottenere tutti gli equipaggiamenti. Sullo sprite principale del tuo clicker, aggiorna `attendi fino a quando`{:class="block3control"} in modo che il giocatore abbia bisogno di un punteggio alto **e** di tutto l'equipaggiamento (che imposta `pizze per click`{:class="block3variables"} a `24` nel progetto demo).
+> Per vincere, fai in modo che un giocatore abbia bisogno di ottenere tutti gli equipaggiamenti. Sullo sprite principale del tuo clicker, aggiorna `attendi fino a quando`{:class="block3control"} in modo che il giocatore abbia bisogno di un punteggio alto **e** di tutto l'equipaggiamento (che imposta `pizze per clic`{:class="block3variables"} a `24` nel progetto demo).
 >
 > <p align="center"><img src="images/pizza.png" alt="Pizza sprite icon." width="96" height="96" style="object-fit: contain;"></p>
 >
 > ```blocks3
 > when green flag clicked
 > set drag mode [not draggable v]
-> +wait until <<(pizzas) > (10000)> and <(pizzas per click) = (24)>>
+> +wait until <<(pizze) > (10000)> and <(pizze per clic) = (24)>>
 > start sound (Win v)
-> say [You Win!] for (2) seconds
-> stop [all v]
+> say [Hai vinto!] for (2) seconds
+> stop [tutto v]
 > ```
 
 Acquista tutti e tre i pezzi di equipaggiamento. Il messaggio di vittoria ora appare solo quando il progetto demo è completamente configurato.

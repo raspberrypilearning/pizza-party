@@ -37,10 +37,8 @@ Clicca sulla bandierina verde. Ogni aiutante dovrebbe crescere di 10 in totale, 
 ***
 Questo progetto è stato tradotto da volontari:
 
-[name]
+Fabrizio Tringali
 
-[name]
-
-[name]
+Pierangela Trovato
 
 Grazie ai volontari, possiamo offrire alle persone di tutto il mondo la possibilità di imparare nella loro lingua. Puoi aiutarci a raggiungere più persone offrendoti come volontario per la traduzione - puoi trovare maggiori informazioni su [rpf.io/translate](https://rpf.io/translate).
