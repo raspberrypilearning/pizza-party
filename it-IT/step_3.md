@@ -79,7 +79,7 @@ Ancora non cambia nulla, perché `pizze per clic`{:class="block3variables"} è r
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > switch costume to (cutter v)
 > hide
 > ```
@@ -92,7 +92,7 @@ Ancora non cambia nulla, perché `pizze per clic`{:class="block3variables"} è r
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [on trascinabile v]
 > switch costume to (cutter v)
 > hide
 > +wait until <(pizze) > (24)>

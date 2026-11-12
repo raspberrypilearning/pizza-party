@@ -96,7 +96,7 @@ Il primo aiutante costa 50 pizze. Dopo l'acquisto, `chef` dovrebbe essere `1` e 
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > hide
 > forever
 > if <(pizze) > ((prezzo chef) - (1))> then

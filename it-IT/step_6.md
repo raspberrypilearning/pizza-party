@@ -82,7 +82,7 @@ Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `nonne 0` 
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > hide
 > forever
 > if <(pizze) > ((prezzo della nonna) - (1))> then

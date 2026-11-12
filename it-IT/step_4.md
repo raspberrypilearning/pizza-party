@@ -36,7 +36,7 @@ Parti dal prototipo della taglierina con altri due potenziamenti che rendono ogn
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > switch costume to (rolling_pin v)
 > hide
 > wait until <(pizze) > (499)>
@@ -81,13 +81,13 @@ Clicca fino a quando il punteggio raggiunge 500. Il mattarello appare; cliccaci 
 
 > [!TASK]
 >
-> Aggiorna gli script copiati per il forno. Costa `3000` e porta `pizze per click`{:class="block3variables"} a `24`.
+> Aggiorna gli script copiati per il forno. Costa `3000` e porta `pizze per clic`{:class="block3variables"} a `24`.
 >
 > <p align="center"><img src="images/oven.png" alt="Oven sprite icon." width="96" height="96" style="object-fit: contain;"></p>
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > switch costume to (oven v)
 > hide
 > wait until <(pizze) > (2999)>
@@ -116,7 +116,7 @@ Clicca fino a quando il punteggio raggiunge 3000. Acquista il forno e verifica c
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > +wait until <<(pizze) > (10000)> and <(pizze per clic) = (24)>>
 > start sound (Win v)
 > say [Hai vinto!] for (2) seconds

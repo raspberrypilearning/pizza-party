@@ -92,7 +92,7 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > ```
 
 > [!TASK]
@@ -105,7 +105,7 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [non trascinabile v]
 > +wait until <(pizze) > (10000)>
 > +start sound (Win v)
 > +say [Hai vinto!] for (2) seconds
