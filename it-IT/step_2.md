@@ -116,7 +116,7 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 >
 > Una **condizione di vittoria** è la regola che stabilisce quando un giocatore ha completato o vinto una partita.
 
-> [!COMPITO]
+> [!TASK]
 >
 > Clicca su `Stage`{:class="block3looks"} e resetta il punteggio sulla bandiera verde.
 >
@@ -127,6 +127,6 @@ Fai clic sul tuo sprite. La tua variabile punteggio aumenta.
 > set [pizzas v] to (0)
 > ```
 
-> [!COMPITO]
+> [!TASK]
 >
 > **Prova:** Clicca sulla bandierina verde. Il tuo punteggio dovrebbe partire da 0 e aumentare a ogni clic.
