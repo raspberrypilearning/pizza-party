@@ -14,14 +14,14 @@ Aggiungi equipaggiamento che il giocatore può sbloccare per rendere ogni clic p
 
 > [!TASK]
 >
-> Fai clic su `Stage`{:class="block3looks"} e imposta `pizze per clic`{:class="block3variables"} su `1` sullo script della bandierina verde, in modo che un clic ne aggiunga sempre almeno una.
+> Fai clic su `Stage`{:class="block3looks"} e imposta `pizze per click`{:class="block3variables"} su `1` sullo script della bandierina verde, in modo che un clic ne aggiunga sempre almeno una.
 >
 > ![Selezione dello Stage, a destra dell'elenco degli sprite.](images/select-stage.png)
 >
 > ```blocks3
 > when green flag clicked
-> set [pizze v] to (0)
-> +set [pizze per clic v] to (1)
+> set [pizzas v] to (0)
+> +set [pizzas per click v] to (1)
 > ```
 
 > [!TASK]
@@ -33,13 +33,13 @@ Aggiungi equipaggiamento che il giocatore può sbloccare per rendere ogni clic p
 > ```blocks3
 > when this sprite clicked
 > start sound (Tennis Hit v)
-> +change [pizze v] by (pizze per clic)
+> +change [pizzas v] by (pizzas per click)
 > change size by (10)
 > wait (0.05) seconds
 > change size by (-10)
 > ```
 
-Ancora non cambia nulla, perché `pizze per clic`{:class="block3variables"} è rimasto a `1`. L'attrezzatura lo potenzierà.
+Ancora non cambia nulla, perché `pizze per click`{:class="block3variables"} è rimasto a `1`. L'attrezzatura lo potenzierà.
 
 > [!TASK]
 >
@@ -79,7 +79,7 @@ Ancora non cambia nulla, perché `pizze per clic`{:class="block3variables"} è r
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [non trascinabile v]
+> set drag mode [not draggable v]
 > switch costume to (cutter v)
 > hide
 > ```
@@ -92,13 +92,13 @@ Ancora non cambia nulla, perché `pizze per clic`{:class="block3variables"} è r
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [on trascinabile v]
+> set drag mode [not draggable v]
 > switch costume to (cutter v)
 > hide
-> +wait until <(pizze) > (24)>
+> +wait until <(pizzas) > (24)>
 > +show
 > +start sound (Alert v)
-> +say [Nuovo equipaggiamento sbloccato!] for (2) seconds
+> +say [New equipment unlocked!] for (2) seconds
 > ```
 
 > [!TIP]
@@ -117,10 +117,10 @@ Ancora non cambia nulla, perché `pizze per clic`{:class="block3variables"} è r
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizze) > (24)>> then
+> if <<(costume [number v]) = (1)> and <(pizzas) > (24)>> then
 > start sound (Tada v)
-> change [pizze v] by (-25)
-> set [pizze per clic v] to (2)
+> change [pizzas v] by (-25)
+> set [pizzas per click v] to (2)
 > next costume
 > end
 > ```
