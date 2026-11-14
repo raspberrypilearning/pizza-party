@@ -5,7 +5,7 @@ Crea un clicker infinito in cui i giocatori toccano un elemento, acquistano pote
 > [!NOPRINT]
 >
 > <div class="scratch-preview">
->  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/1439379166/?autostart=false" frameborder="0"></iframe>
+>  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/1361881665/?autostart=false" frameborder="0"></iframe>
 > </div>
 
 > [!PRINTONLY]

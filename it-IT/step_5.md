@@ -34,7 +34,7 @@ Aggiungi un aiutante che prepara pizze ogni secondo, anche quando il giocatore s
 
 > [!TASK]
 >
-> Fai clic su `Stage`{:class="block3looks"} e assegna i valori iniziali alle variabili degli aiutanti sul click alla bandierina verde.
+> Fai clic su `Stage`{:class="block3looks"} e assegna i valori iniziali alle variabili degli aiutanti sul clic alla bandierina verde.
 >
 > Il primo aiutante costa `50`, quindi la taglierina si sblocca comunque per prima a `25`.
 >
@@ -42,11 +42,11 @@ Aggiungi un aiutante che prepara pizze ogni secondo, anche quando il giocatore s
 >
 > ```blocks3
 > when green flag clicked
-> set [pizze v] to (0)
-> set [pizze per clic v] to (1)
-> +set [chef v] to (0)
-> +set [prezzo chef v] to (50)
-> +set [pizze al secondo v] to (0)
+> set [pizzas v] to (0)
+> set [pizzas per click v] to (1)
+> +set [chefs v] to (0)
+> +set [chef price v] to (50)
+> +set [pizzas per second v] to (0)
 > ```
 
 Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `chef 0`, `prezzo chef 50`, e `pizze al secondo 0`.
@@ -62,8 +62,8 @@ Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `chef 0`, 
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizze v] by ((0) - (prezzo chef))
-> change [chef v] by (1)
+> change [pizzas v] by ((0) - (chef price))
+> change [chefs v] by (1)
 > ```
 
 > [!TASK]
@@ -73,14 +73,14 @@ Clicca sulla bandierina verde. Le nuove variabili dovrebbero mostrare `chef 0`, 
 > Moltiplicando per `1,15` si aggiunge il 15% al vecchio prezzo. `arrotonda`{:class="block3operators"} mantiene il nuovo prezzo come un numero intero.
 >
 > ```blocks3
-> when this sprite clicked
-> start sound (Clang v)
-> change [pizze v] by ((0) - (prezzo chef))
-> change [chef v] by (1)
-> +set [prezzo chef v] to (round ((prezzo chef) * (1.15)))
+> quando si clicca questo sprite
+> avvia riproduzione suono (Clang v)
+> cambia [pizze v] di ((0) - (prezzo chef))
+> cambia [chef v] di (1)
+> +porta [prezzo chef v] a (arrotonda ((prezzo chef) * (1.15)))
 > ```
 
-Il primo aiutante costa 50 pizze. Dopo l'acquisto, `chef` dovrebbe essere `1` e `prezzo chef` dovrebbe essere `58`.
+Il primo aiutante costa 50 pizze. Dopo l'acquisto, `chefs` dovrebbe essere `1` e `chef price` dovrebbe essere `58`.
 
 > [!TIP]
 >
@@ -90,16 +90,16 @@ Il primo aiutante costa 50 pizze. Dopo l'acquisto, `chef` dovrebbe essere `1` e 
 >
 > Fai apparire l'aiutante solo quando il giocatore può permettersi il prezzo corrente.
 >
-> Scratch non ha un blocco `maggiore o uguale a`. Poiché il punteggio utilizza numeri interi, verificare la condizione `pizze > prezzo chef - 1` produce lo stesso risultato.
+> Scratch non ha un blocco `maggiore o uguale a`. Poiché il punteggio utilizza numeri interi, verificare la condizione `pizze > prezzo dello chef - 1` produce lo stesso risultato.
 >
 > <p align="center"><img src="images/chef.png" alt="Chef sprite icon." width="96" height="96" style="object-fit: contain;"></p>
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [non trascinabile v]
+> set drag mode [not draggable v]
 > hide
 > forever
-> if <(pizze) > ((prezzo chef) - (1))> then
+> if <(pizzas) > ((chef price) - (1))> then
 > show
 > else
 > hide
@@ -120,8 +120,8 @@ Fai clic sulla bandierina verde e poi sullo sprite principale. L'aiutante dovreb
 > ![Il pulsante Crea un Blocco nella sezione I Miei Blocchi.](images/make-a-block.png)
 >
 > ```blocks3
-> define aggiorna pizze al secondo
-> set [pizze al secondo v] to (chefs)
+> define update pizzas per second
+> set [pizzas per second v] to (chefs)
 > ```
 
 > [!TIP]
@@ -135,8 +135,8 @@ Fai clic sulla bandierina verde e poi sullo sprite principale. L'aiutante dovreb
 > Nel blocco `quando ricevo`{:class="block3events"}, apri il menu dei messaggi, scegli **Nuovo messaggio** e assegnagli il nome `aggiornamento`.
 >
 > ```blocks3
-> when I receive (aggiorna v)
-> aggiorna pizze al secondo :: custom
+> when I receive (update v)
+> update pizzas per second :: custom
 > ```
 
 > [!TASK]
@@ -146,10 +146,10 @@ Fai clic sulla bandierina verde e poi sullo sprite principale. L'aiutante dovreb
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizze v] by ((0) - (prezzo chef))
-> change [chef v] by (1)
-> set [prezzo chef v] to (round ((prezzo chef) * (1.15)))
-> +broadcast (aggiorna v)
+> change [pizzas v] by ((0) - (chef price))
+> change [chefs v] by (1)
+> set [chef price v] to (round ((chef price) * (1.15)))
+> +broadcast (update v)
 > ```
 
 > [!TASK]
@@ -158,14 +158,14 @@ Fai clic sulla bandierina verde e poi sullo sprite principale. L'aiutante dovreb
 >
 > ```blocks3
 > when green flag clicked
-> set [pizze v] to (0)
-> set [pizze per clic v] to (1)
-> set [chef v] to (0)
-> set [prezzo chef v] to (50)
-> aggiorna pizze al secondo :: custom
+> set [pizzas v] to (0)
+> set [pizzas per click v] to (1)
+> set [chefs v] to (0)
+> set [chef price v] to (50)
+> update pizzas per second :: custom
 > forever
 > wait (1) seconds
-> change [pizze v] by (pizze al secondo)
+> change [pizzas v] by (pizzas per second)
 > end
 > ```
 

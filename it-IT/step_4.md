@@ -36,21 +36,21 @@ Parti dal prototipo della taglierina con altri due potenziamenti che rendono ogn
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [non trascinabile v]
+> set drag mode [not draggable v]
 > switch costume to (rolling_pin v)
 > hide
-> wait until <(pizze) > (499)>
+> wait until <(pizzas) > (499)>
 > show
 > start sound (Alert v)
-> say [Nuovo equipaggiamento sbloccato!] for (2) seconds
+> say [New equipment unlocked!] for (2) seconds
 > ```
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizze) > (499)>> then
+> if <<(costume [number v]) = (1)> and <(pizzas) > (499)>> then
 > start sound (Tada v)
-> change [pizze v] by (-500)
-> set [pizze per clic v] to (6)
+> change [pizzas v] by (-500)
+> set [pizzas per click v] to (6)
 > next costume
 > end
 > ```
@@ -87,21 +87,21 @@ Clicca fino a quando il punteggio raggiunge 500. Il mattarello appare; cliccaci 
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [non trascinabile v]
+> set drag mode [not draggable v]
 > switch costume to (oven v)
 > hide
-> wait until <(pizze) > (2999)>
+> wait until <(pizzas) > (2999)>
 > show
 > start sound (Alert v)
-> say [Nuovo equipaggiamento sbloccato!] for (2) seconds
+> say [New equipment unlocked!] for (2) seconds
 > ```
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizze) > (2999)>> then
+> if <<(costume [number v]) = (1)> and <(pizzas) > (2999)>> then
 > start sound (Tada v)
-> change [pizze v] by (-3000)
-> set [pizze per clic v] to (24)
+> change [pizzas v] by (-3000)
+> set [pizzas per click v] to (24)
 > next costume
 > end
 > ```
@@ -116,11 +116,11 @@ Clicca fino a quando il punteggio raggiunge 3000. Acquista il forno e verifica c
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [non trascinabile v]
-> +wait until <<(pizze) > (10000)> and <(pizze per clic) = (24)>>
+> set drag mode [not draggable v]
+> +wait until <<(pizzas) > (10000)> and <(pizzas per click) = (24)>>
 > start sound (Win v)
-> say [Hai vinto!] for (2) seconds
-> stop [tutto v]
+> say [You Win!] for (2) seconds
+> stop [all v]
 > ```
 
 Acquista tutti e tre i pezzi di equipaggiamento. Il messaggio di vittoria ora appare solo quando il progetto demo è completamente configurato.
