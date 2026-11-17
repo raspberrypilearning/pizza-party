@@ -1,4 +1,4 @@
-## Add a second helper
+## Add a second auto-clicker
 
 Add a second, more powerful helper that makes five pizzas per second instead of one.
 
