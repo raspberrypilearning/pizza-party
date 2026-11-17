@@ -11,7 +11,7 @@ steps:
       - engaged
   - title: Aggiungi il primo equipaggiamento
   - title: Aggiungi altro equipaggiamento
-  - title: Aggiungi un aiutante
+  - title: Aggiungi i clicker automatici
     completion:
       - internal
   - title: Aggiungi un secondo aiutante
@@ -19,4 +19,5 @@ steps:
     completion:
       - external
   - title: Rendi animato l'equipaggiamento
-  - title: Rendi animati gli aiutanti
+  - title: Anima i clicker automatici
+
