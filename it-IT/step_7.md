@@ -16,7 +16,7 @@ In questo momento il gioco funziona, ma forse è troppo semplice. Dai al gioco u
 
 > [!TASK]
 >
-> Trascina ciascun contatore nella posizione desiderata. La pizzeria mette in alto a sinistra `pizze`{:class="block3variables"}, `pizze al secondo`{:class="block3variables"} e `pizze per clic`{:class="block3variables"}, posiziona `prezzo chef`{:class="block3variables"} e `chef`{:class="block3variables"} accanto allo chef, e `prezzo della nonna`{:class="block3variables"} e `nonne`{:class="block3variables"} accanto alla nonna.
+> Trascina ciascun contatore nella posizione desiderata. La pizzeria mette in alto a sinistra `pizze`{:class="block3variables"}, `pizze al secondo`{:class="block3variables"} e `pizze per clic`{:class="block3variables"}, posiziona `prezzo dello chef`{:class="block3variables"} e `chef`{:class="block3variables"} accanto allo chef, e `prezzo della nonna`{:class="block3variables"} e `nonne`{:class="block3variables"} accanto alla nonna.
 
 > [!TIP]
 >
