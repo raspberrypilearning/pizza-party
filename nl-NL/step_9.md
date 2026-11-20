@@ -33,3 +33,14 @@ Klik op de groene vlag. Elke helper moet in totaal met 10 groeien, met 10 krimpe
 > Kleine animaties die een spel levendiger maken zonder de regels te veranderen, maken deel uit van **spelgevoel**, ook wel **juice** genoemd.
 
 > [!SAVE]
+
+***
+Dit project werd vertaald door vrijwilligers:
+
+[name]
+
+[name]
+
+[name]
+
+Dankzij vrijwilligers kunnen we mensen over de hele wereld de kans geven om in hun eigen taal te leren. Jij kunt ons helpen meer mensen te bereiken door vrijwillig te starten met vertalen - meer informatie op [rpf.io/translate](https://rpf.io/translate).

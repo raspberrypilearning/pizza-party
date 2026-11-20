@@ -53,7 +53,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 >
 > ![Het tabblad Geluiden linksboven in de editor.](images/sounds_tab.png)
 >
-> Voeg het toe aan de bovenkant van je script. Gebruik in dit project `start geluid`{:class="block3sound"}, en niet `start geluid en wacht `{:class="block3sound"}, zodat het geluid start zonder de rest van het programma te blokkeren.
+> Voeg het toe aan de bovenkant van je script. Gebruik in dit project `start geluid`{:class="block3sound"}, en niet `start geluid en wacht`{:class="block3sound"}, zodat het geluid start zonder de rest van het programma te blokkeren.
 >
 > ```blocks3
 > when this sprite clicked
