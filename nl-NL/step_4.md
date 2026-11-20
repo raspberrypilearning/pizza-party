@@ -37,7 +37,7 @@ Bouw voort op het prototype van de snijder met twee extra upgrades die elke klik
 > ```blocks3
 > when green flag clicked
 > set drag mode [niet sleepbaar v]
-> switch costume to (rolling_pin v)
+> switch costume to (deegroller v)
 > hide
 > wait until <(pizza's) > (499)>
 > show
@@ -47,7 +47,7 @@ Bouw voort op het prototype van de snijder met twee extra upgrades die elke klik
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizza's) > (499)>> then
+> if <<(costume [nummer v]) = (1)> and <(pizza's) > (499)>> then
 > start sound (Tada v)
 > change [pizza's v] by (-500)
 > set [pizza's per klik v] to (6)
@@ -98,7 +98,7 @@ Klik door tot de score 500 is. De deegroller verschijnt; klik erop om hem te kop
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizza's) > (2999)>> then
+> if <<(costume [nummer v]) = (1)> and <(pizza's) > (2999)>> then
 > start sound (Tada v)
 > change [pizza's v] by (-3000)
 > set [pizza's per klik v] to (24)

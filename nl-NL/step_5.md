@@ -73,11 +73,11 @@ Klik op de groene vlag. De nieuwe uitlezingen zouden 'chef-koks 0', 'chef-kok pr
 > Vermenigvuldigen met `1.15` voegt 15% toe aan de oude prijs. `afgerond`{:class="block3operators"} zorgt ervoor dat de nieuwe prijs een geheel getal blijft.
 >
 > ```blocks3
-> wanneer op deze sprite wordt geklikt
-> start geluid (Clang v)
-> verander [pizza's v] met ((0)-(chef-kok prijs))
-> verander [chef-koks v] met (1)
-> +maak [chef-kok prijs v] (afgerond ((chef-kok prijs) * 1.15)))
+> when this sprite clicked
+> start sound (Clang v)
+> change [pizza's v] by ((0) - (chef price))
+> change [chef-koks v] by (1)
+> +set [chef-kok prijs v] to (round ((chef-kok prijs) * (1.15)))
 > ```
 
 De eerste helper kost 50 pizza's. Na de aankoop moet `chef-koks` op `1` staan en `chef-kok prijs` op `58`.
@@ -120,7 +120,7 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 > ![De knop 'Maak een blok' in het Mijn Blokken menu.](images/make-a-block.png)
 >
 > ```blocks3
-> define update pizzas per second
+> define bijwerken pizza's per seconde
 > set [pizza's per seconde v] to (chef-koks)
 > ```
 
