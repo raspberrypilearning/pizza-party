@@ -1,0 +1,21 @@
+title: Pizzafeest
+hero_image: images/banner.png
+description: Maak een pizza-clickerspel in dit Code Club arcade-project.
+listed: true
+pdf: false
+steps:
+  - title: Wat ga je maken
+  - title: Maak de clicker
+    completion:
+      - engaged
+  - title: Voeg het eerste apparaat toe
+  - title: Voeg meer apparatuur toe
+  - title: Autoclickers toevoegen
+    completion:
+      - internal
+  - title: Voeg een tweede auto-clicker toe
+  - title: Een achtergrond toevoegen
+    completion:
+      - external
+  - title: Breng de apparatuur tot leven
+  - title: Animeer de autoclickers
