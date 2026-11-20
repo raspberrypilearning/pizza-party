@@ -42,11 +42,11 @@ Voeg een helper toe die elke seconde pizza's maakt, zelfs als de speler stopt me
 >
 > ```blocks3
 > when green flag clicked
-> set [pizzas v] to (0)
-> set [pizzas per click v] to (1)
-> +set [chefs v] to (0)
-> +set [chef price v] to (50)
-> +set [pizzas per second v] to (0)
+> set [pizza's v] to (0)
+> set [pizza's per klik v] to (1)
+> +set [chef-koks v] to (0)
+> +set [chef-kok prijs v] to (50)
+> +set [pizza's per seconde v] to (0)
 > ```
 
 Klik op de groene vlag. De nieuwe uitlezingen zouden 'chef-koks 0', 'chef-kok prijs 50' en 'pizza's per seconde 0' moeten weergeven.
@@ -62,8 +62,8 @@ Klik op de groene vlag. De nieuwe uitlezingen zouden 'chef-koks 0', 'chef-kok pr
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizzas v] by ((0) - (chef price))
-> change [chefs v] by (1)
+> change [pizza's v] by ((0) - (chef price))
+> change [chef-koks v] by (1)
 > ```
 
 > [!TASK]
@@ -96,10 +96,10 @@ De eerste helper kost 50 pizza's. Na de aankoop moet `chef-koks` op `1` staan en
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [niet sleepbaar v]
 > hide
 > forever
-> if <(pizzas) > ((chef price) - (1))> then
+> if <(pizza's) > ((chef-kok prijs) - (1))> then
 > show
 > else
 > hide
@@ -121,7 +121,7 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 >
 > ```blocks3
 > define update pizzas per second
-> set [pizzas per second v] to (chefs)
+> set [pizza's per seconde v] to (chef-koks)
 > ```
 
 > [!TIP]
@@ -135,8 +135,8 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 > In het `wanneer ik signaal ontvang`{:class="block3events"} blok open je het berichtmenu, kies **Nieuw bericht**, en noem het `bijwerken`.
 >
 > ```blocks3
-> when I receive (update v)
-> update pizzas per second :: custom
+> when I receive (bijwerken v)
+> bijwerken pizza's per seconde :: custom
 > ```
 
 > [!TASK]
@@ -146,10 +146,10 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizzas v] by ((0) - (chef price))
-> change [chefs v] by (1)
-> set [chef price v] to (round ((chef price) * (1.15)))
-> +broadcast (update v)
+> change [pizza's v] by ((0) - (chef price))
+> change [chef-koks v] by (1)
+> set [chef-kok prijs v] to (round ((chef-kok prijs) * (1.15)))
+> +broadcast (bijwerken v)
 > ```
 
 > [!TASK]
@@ -158,14 +158,14 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 >
 > ```blocks3
 > when green flag clicked
-> set [pizzas v] to (0)
-> set [pizzas per click v] to (1)
-> set [chefs v] to (0)
-> set [chef price v] to (50)
-> update pizzas per second :: custom
+> set [pizza's v] to (0)
+> set [pizza's per klik v] to (1)
+> set [chef-koks v] to (0)
+> set [chef-kok prijs v] to (50)
+> bijwerken pizza's per seconde :: custom
 > forever
 > wait (1) seconds
-> change [pizzas v] by (pizzas per second)
+> change [pizza's v] by (pizza's per seconde)
 > end
 > ```
 

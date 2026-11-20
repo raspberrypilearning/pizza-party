@@ -42,16 +42,16 @@ Voeg een tweede, krachtigere helper toe die vijf pizza's per seconde maakt in pl
 >
 > ```blocks3
 > when green flag clicked
-> set [pizzas v] to (0)
-> set [pizzas per click v] to (1)
-> set [chefs v] to (0)
-> set [chef price v] to (50)
-> +set [grannies v] to (0)
-> +set [granny price v] to (100)
-> update pizzas per second :: custom
+> set [pizza's v] to (0)
+> set [pizza's per klik v] to (1)
+> set [chef-koks v] to (0)
+> set [chef-kok prijs v] to (50)
+> +set [oma's v] to (0)
+> +set [oma prijs v] to (100)
+> bijwerken pizza's per seconde :: custom
 > forever
 > wait (1) seconds
-> change [pizzas v] by (pizzas per second)
+> change [pizza's v] by (pizza's per seconde)
 > end
 > ```
 
@@ -68,10 +68,10 @@ Klik op de groene vlag. De nieuwe uitlezingen zouden `oma's 0` en `oma prijs 100
 > ```blocks3
 > when this sprite clicked
 > start sound (Collect v)
-> change [pizzas v] by ((0) - (granny price))
-> change [grannies v] by (1)
-> set [granny price v] to (round ((granny price) * (1.15)))
-> broadcast (update v)
+> change [pizza's v] by ((0) - (oma prijs))
+> change [oma's v] by (1)
+> set [goma prijs v] to (round ((oma prijs) * (1.15)))
+> broadcast (bijwerken v)
 > ```
 
 > [!TASK]
@@ -82,10 +82,10 @@ Klik op de groene vlag. De nieuwe uitlezingen zouden `oma's 0` en `oma prijs 100
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [niet sleepbaar v]
 > hide
 > forever
-> if <(pizzas) > ((granny price) - (1))> then
+> if <(pizza's) > ((oma prijs) - (1))> then
 > show
 > else
 > hide
@@ -104,8 +104,8 @@ Klik op de groene vlag en bouw je score op. De eerste helper moet verschijnen bi
 > ![Het Speelveld selecteren, rechts van de sprite lijst.](images/select-stage.png)
 >
 > ```blocks3
-> define update pizzas per second
-> set [pizzas per second v] to ((chefs) + ((grannies) * (5)))
+> define bijwerken pizza's per seconde
+> set [pizza's per seconde v] to ((chef-koks) + ((oma's) * (5)))
 > ```
 
 > [!TIP]

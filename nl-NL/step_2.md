@@ -42,7 +42,7 @@ Voeg iets toe om op te klikken en een score die omhoog gaat wanneer je erop klik
 >
 > ```blocks3
 > when this sprite clicked
-> change [pizzas v] by (1)
+> change [pizza's v] by (1)
 > ```
 
 Klik op je sprite. Je scorevariabele gaat omhoog.
@@ -58,7 +58,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 > ```blocks3
 > when this sprite clicked
 > +start sound (Tennis Hit v)
-> change [pizzas v] by (1)
+> change [pizza's v] by (1)
 > ```
 
 > [!TIP]
@@ -74,7 +74,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 > ```blocks3
 > when this sprite clicked
 > start sound (Tennis Hit v)
-> change [pizzas v] by (1)
+> change [pizza's v] by (1)
 > +change size by (10)
 > +wait (0.05) seconds
 > +change size by (-10)
@@ -92,7 +92,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [not draggable v]
+> set drag mode [niet sleepbaar v]
 > ```
 
 > [!TASK]
@@ -104,11 +104,11 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 > Voeg de **winstvoorwaarde** toe aan hetzelfde script. Deze wacht tot de score hoog genoeg is en viert dan de winst.
 >
 > ```blocks3
-> wanneer op de groene vlag wordt geklikt
-> zet sleepbaar op [niet sleepbaar v]
-> +wacht tot <(pizza's) > (10000)>
-> +start geluid (Win v)
-> +zeg [Je hebt gewonnen!] (2) sec.
+> when green flag clicked
+> set drag mode [niet sleepbaar v]
+> +wait until <(pizza's) > (10000)>
+> +start sound (Win v)
+> +say [Je hebt gewonnen!] for (2) seconds
 > +stop [alle v]
 > ```
 
@@ -124,7 +124,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 >
 > ```blocks3
 > when green flag clicked
-> set [pizzas v] to (0)
+> set [pizza's v] to (0)
 > ```
 
 > [!TASK]

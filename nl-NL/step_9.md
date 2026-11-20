@@ -37,10 +37,8 @@ Klik op de groene vlag. Elke helper moet in totaal met 10 groeien, met 10 krimpe
 ***
 Dit project werd vertaald door vrijwilligers:
 
-[name]
+Iny van Beuningen
 
-[name]
-
-[name]
+Robert-Jan Kempenaar
 
 Dankzij vrijwilligers kunnen we mensen over de hele wereld de kans geven om in hun eigen taal te leren. Jij kunt ons helpen meer mensen te bereiken door vrijwillig te starten met vertalen - meer informatie op [rpf.io/translate](https://rpf.io/translate).
