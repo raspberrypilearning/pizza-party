@@ -1,0 +1,25 @@
+pizzas
+
+pizzas par clic
+
+Nouvel équipement débloqué !
+
+Tu as gagné !
+
+chefs
+
+prix du chef
+
+pizzas par seconde
+
+mettre à jour les pizzas par seconde
+
+mettre à jour
+
+grands-mères
+
+prix de grand-mère
+
+Faire un clic droit sur le costume
+
+Choisis « Dupliquer » pour créer la version achetée.

@@ -1,0 +1,21 @@
+title: Fête des pizzas
+hero_image: images/banner.png
+description: Crée un jeu de pizza clic dans ce projet d'arcade Code Club.
+listed: true
+pdf: false
+steps:
+  - title: Ce que tu vas faire
+  - title: Faire le clic
+    completion:
+      - engaged
+  - title: Ajouter le premier équipement
+  - title: Ajouter plus d'équipement
+  - title: Ajouter des clics automatiques
+    completion:
+      - internal
+  - title: Ajouter un deuxième clic automatique
+  - title: Ajouter un arrière-plan
+    completion:
+      - external
+  - title: Animer l'équipement
+  - title: Animer les clics automatiques

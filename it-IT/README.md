@@ -54,14 +54,14 @@ Contains supporting resources for the project.
 - Must include the PDF version of the project, clearly named.
 - Other resources such as offline starter projects, assets, or supporting files can also go here.
 - Learners can download a `.zip` of this folder via:  
-  `https://rpf.io/p/it-IT/project-slug-go`
+  `https://rpf.io/p/en/project-slug-go`
 
 ### `solutions/`
 
 Contains the final completed version of the project, if needed.
 
 - Learners can download this via:  
-  `https://rpf.io/p/it-IT/project-slug-get`
+  `https://rpf.io/p/en/project-slug-get`
 
 ### `meta.yml`
 
