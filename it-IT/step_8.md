@@ -1,4 +1,4 @@
-## Rendi l'equipaggiamento animato
+## Rendi animato l'equipaggiamento
 
 Fai in modo che le tue attrezzature si muovano, così la loro sezione sembrerà più vivace.
 
