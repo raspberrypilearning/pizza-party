@@ -118,7 +118,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 
 > [!TASK]
 >
-> Klik op het`Speelveld`{:class="block3looks"} en zet de score op 0 wanneer op de groene vlag wordt geklikt.
+> Klik op het `Speelveld`{:class="block3looks"} en zet de score op 0 wanneer op de groene vlag wordt geklikt.
 >
 > ![Het speelveld selecteren, rechts van de sprite lijst.](images/select-stage.png)
 >
