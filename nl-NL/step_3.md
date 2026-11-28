@@ -20,8 +20,8 @@ Voeg apparatuur toe die de speler kan vrijspelen, zodat elke klik meer waarde he
 >
 > ```blocks3
 > when green flag clicked
-> set [pizza's v] to (0)
-> +set [pizza's per klik v] to (1)
+> set [pizzas v] to (0)
+> +set [pizzas per click v] to (1)
 > ```
 
 > [!TASK]
@@ -33,7 +33,7 @@ Voeg apparatuur toe die de speler kan vrijspelen, zodat elke klik meer waarde he
 > ```blocks3
 > when this sprite clicked
 > start sound (Tennis Hit v)
-> +change [pizza's v] by (pizza's per klik)
+> +change [pizzas v] by (pizzas per click)
 > change size by (10)
 > wait (0.05) seconds
 > change size by (-10)
@@ -79,8 +79,8 @@ Er verandert nog niets, want `pizza's per klik`{:class="block3variables"} is nog
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [niet sleepbaar v]
-> switch costume to (snijder v)
+> set drag mode [not draggable v]
+> switch costume to (cutter v)
 > hide
 > ```
 
@@ -92,13 +92,13 @@ Er verandert nog niets, want `pizza's per klik`{:class="block3variables"} is nog
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [niet sleepbaar v]
-> switch costume to (snijder v)
+> set drag mode [not draggable v]
+> switch costume to (cutter v)
 > hide
-> +wait until <(pizza's) > (24)>
+> +wait until <(pizzas) > (24)>
 > +show
 > +start sound (Alert v)
-> +say [Nieuwe apparatuur ontgrendeld!] for (2) seconds
+> +say [New equipment unlocked!] for (2) seconds
 > ```
 
 > [!TIP]
@@ -117,10 +117,10 @@ Er verandert nog niets, want `pizza's per klik`{:class="block3variables"} is nog
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [number v]) = (1)> and <(pizza's) > (24)>> then
+> if <<(costume [number v]) = (1)> and <(pizzas) > (24)>> then
 > start sound (Tada v)
-> change [pizza's v] by (-25)
-> set [pizza's per klik v] to (2)
+> change [pizzas v] by (-25)
+> set [pizzas per click v] to (2)
 > next costume
 > end
 > ```

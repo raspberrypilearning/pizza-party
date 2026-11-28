@@ -1,6 +1,6 @@
 pizze
 
-pizze per click
+pizze per clic
 
 Nuovo equipaggiamento sbloccato!
 
@@ -14,7 +14,7 @@ pizze al secondo
 
 aggiorna pizze al secondo
 
-aggiorna
+aggiornamento
 
 nonne
 

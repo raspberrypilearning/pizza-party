@@ -42,11 +42,11 @@ Voeg een helper toe die elke seconde pizza's maakt, zelfs als de speler stopt me
 >
 > ```blocks3
 > when green flag clicked
-> set [pizza's v] to (0)
-> set [pizza's per klik v] to (1)
-> +set [chef-koks v] to (0)
-> +set [chef-kok prijs v] to (50)
-> +set [pizza's per seconde v] to (0)
+> set [pizzas v] to (0)
+> set [pizzas per click v] to (1)
+> +set [chefs v] to (0)
+> +set [chef price v] to (50)
+> +set [pizzas per second v] to (0)
 > ```
 
 Klik op de groene vlag. De nieuwe uitlezingen zouden 'chef-koks 0', 'chef-kok prijs 50' en 'pizza's per seconde 0' moeten weergeven.
@@ -62,8 +62,8 @@ Klik op de groene vlag. De nieuwe uitlezingen zouden 'chef-koks 0', 'chef-kok pr
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizza's v] by ((0) - (chef price))
-> change [chef-koks v] by (1)
+> change [pizzas v] by ((0) - (chef price))
+> change [chefs v] by (1)
 > ```
 
 > [!TASK]
@@ -73,11 +73,11 @@ Klik op de groene vlag. De nieuwe uitlezingen zouden 'chef-koks 0', 'chef-kok pr
 > Vermenigvuldigen met `1.15` voegt 15% toe aan de oude prijs. `afgerond`{:class="block3operators"} zorgt ervoor dat de nieuwe prijs een geheel getal blijft.
 >
 > ```blocks3
-> when this sprite clicked
-> start sound (Clang v)
-> change [pizza's v] by ((0) - (chef price))
-> change [chef-koks v] by (1)
-> +set [chef-kok prijs v] to (round ((chef-kok prijs) * (1.15)))
+> wanneer op deze sprite wordt geklikt
+> start geluid (Clang v)
+> verander [pizza's v] met ((0)-(chef-kok prijs))
+> verander [chef-koks v] met (1)
+> +maak [chef-kok prijs v] (afgerond ((chef-kok prijs) * 1.15)))
 > ```
 
 De eerste helper kost 50 pizza's. Na de aankoop moet `chef-koks` op `1` staan en `chef-kok prijs` op `58`.
@@ -96,10 +96,10 @@ De eerste helper kost 50 pizza's. Na de aankoop moet `chef-koks` op `1` staan en
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [niet sleepbaar v]
+> set drag mode [not draggable v]
 > hide
 > forever
-> if <(pizza's) > ((chef-kok prijs) - (1))> then
+> if <(pizzas) > ((chef price) - (1))> then
 > show
 > else
 > hide
@@ -120,8 +120,8 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 > ![De knop 'Maak een blok' in het Mijn Blokken menu.](images/make-a-block.png)
 >
 > ```blocks3
-> define bijwerken pizza's per seconde
-> set [pizza's per seconde v] to (chef-koks)
+> define update pizzas per second
+> set [pizzas per second v] to (chefs)
 > ```
 
 > [!TIP]
@@ -135,8 +135,8 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 > In het `wanneer ik signaal ontvang`{:class="block3events"} blok open je het berichtmenu, kies **Nieuw bericht**, en noem het `bijwerken`.
 >
 > ```blocks3
-> when I receive (bijwerken v)
-> bijwerken pizza's per seconde :: custom
+> when I receive (update v)
+> update pizzas per second :: custom
 > ```
 
 > [!TASK]
@@ -146,10 +146,10 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 > ```blocks3
 > when this sprite clicked
 > start sound (Clang v)
-> change [pizza's v] by ((0) - (chef price))
-> change [chef-koks v] by (1)
-> set [chef-kok prijs v] to (round ((chef-kok prijs) * (1.15)))
-> +broadcast (bijwerken v)
+> change [pizzas v] by ((0) - (chef price))
+> change [chefs v] by (1)
+> set [chef price v] to (round ((chef price) * (1.15)))
+> +broadcast (update v)
 > ```
 
 > [!TASK]
@@ -158,14 +158,14 @@ Klik op de groene vlag en vervolgens op de hoofdsprite. De helper moet tot 49 pi
 >
 > ```blocks3
 > when green flag clicked
-> set [pizza's v] to (0)
-> set [pizza's per klik v] to (1)
-> set [chef-koks v] to (0)
-> set [chef-kok prijs v] to (50)
-> bijwerken pizza's per seconde :: custom
+> set [pizzas v] to (0)
+> set [pizzas per click v] to (1)
+> set [chefs v] to (0)
+> set [chef price v] to (50)
+> update pizzas per second :: custom
 > forever
 > wait (1) seconds
-> change [pizza's v] by (pizza's per seconde)
+> change [pizzas v] by (pizzas per second)
 > end
 > ```
 

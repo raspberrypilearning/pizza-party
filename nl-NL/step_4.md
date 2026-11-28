@@ -36,21 +36,21 @@ Bouw voort op het prototype van de snijder met twee extra upgrades die elke klik
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [niet sleepbaar v]
-> switch costume to (deegroller v)
+> set drag mode [not draggable v]
+> switch costume to (rolling_pin v)
 > hide
-> wait until <(pizza's) > (499)>
+> wait until <(pizzas) > (499)>
 > show
 > start sound (Alert v)
-> say [Nieuwe apparatuur ontgrendeld!] for (2) seconds
+> say [New equipment unlocked!] for (2) seconds
 > ```
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [nummer v]) = (1)> and <(pizza's) > (499)>> then
+> if <<(costume [number v]) = (1)> and <(pizzas) > (499)>> then
 > start sound (Tada v)
-> change [pizza's v] by (-500)
-> set [pizza's per klik v] to (6)
+> change [pizzas v] by (-500)
+> set [pizzas per click v] to (6)
 > next costume
 > end
 > ```
@@ -87,21 +87,21 @@ Klik door tot de score 500 is. De deegroller verschijnt; klik erop om hem te kop
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [niet sleepbaar v]
+> set drag mode [not draggable v]
 > switch costume to (oven v)
 > hide
-> wait until <(pizza's) > (2999)>
+> wait until <(pizzas) > (2999)>
 > show
 > start sound (Alert v)
-> say [Nieuwe apparatuur ontgrendeld!] for (2) seconds
+> say [New equipment unlocked!] for (2) seconds
 > ```
 >
 > ```blocks3
 > when this sprite clicked
-> if <<(costume [nummer v]) = (1)> and <(pizza's) > (2999)>> then
+> if <<(costume [number v]) = (1)> and <(pizzas) > (2999)>> then
 > start sound (Tada v)
-> change [pizza's v] by (-3000)
-> set [pizza's per klik v] to (24)
+> change [pizzas v] by (-3000)
+> set [pizzas per click v] to (24)
 > next costume
 > end
 > ```
@@ -116,11 +116,11 @@ Klik door tot de score 3000 is. Koop de oven en controleer of het groene vinkje 
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [niet sleepbaar v]
-> +wait until <<(pizza's) > (10000)> and <(pizza's per klik) = (24)>>
+> set drag mode [not draggable v]
+> +wait until <<(pizzas) > (10000)> and <(pizzas per click) = (24)>>
 > start sound (Win v)
-> say [Je hebt gewonnen!] for (2) seconds
-> stop [alle v]
+> say [You Win!] for (2) seconds
+> stop [all v]
 > ```
 
 Koop alle drie de apparaten. Het winstbericht verschijnt nu pas als het demoproject volledig is ingericht.

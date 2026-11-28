@@ -42,7 +42,7 @@ Voeg iets toe om op te klikken en een score die omhoog gaat wanneer je erop klik
 >
 > ```blocks3
 > when this sprite clicked
-> change [pizza's v] by (1)
+> change [pizzas v] by (1)
 > ```
 
 Klik op je sprite. Je scorevariabele gaat omhoog.
@@ -53,12 +53,12 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 >
 > ![Het tabblad Geluiden linksboven in de editor.](images/sounds_tab.png)
 >
-> Voeg het toe aan de bovenkant van je script. Gebruik in dit project `start geluid`{:class="block3sound"}, en niet `start geluid en wacht`{:class="block3sound"}, zodat het geluid start zonder de rest van het programma te blokkeren.
+> Voeg het toe aan de bovenkant van je script. Gebruik in dit project `start geluid`{:class="block3sound"}, en niet `start geluid en wacht `{:class="block3sound"}, zodat het geluid start zonder de rest van het programma te blokkeren.
 >
 > ```blocks3
 > when this sprite clicked
 > +start sound (Tennis Hit v)
-> change [pizza's v] by (1)
+> change [pizzas v] by (1)
 > ```
 
 > [!TIP]
@@ -74,7 +74,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 > ```blocks3
 > when this sprite clicked
 > start sound (Tennis Hit v)
-> change [pizza's v] by (1)
+> change [pizzas v] by (1)
 > +change size by (10)
 > +wait (0.05) seconds
 > +change size by (-10)
@@ -92,7 +92,7 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 >
 > ```blocks3
 > when green flag clicked
-> set drag mode [niet sleepbaar v]
+> set drag mode [not draggable v]
 > ```
 
 > [!TASK]
@@ -104,11 +104,11 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 > Voeg de **winstvoorwaarde** toe aan hetzelfde script. Deze wacht tot de score hoog genoeg is en viert dan de winst.
 >
 > ```blocks3
-> when green flag clicked
-> set drag mode [niet sleepbaar v]
-> +wait until <(pizza's) > (10000)>
-> +start sound (Win v)
-> +say [Je hebt gewonnen!] for (2) seconds
+> wanneer op de groene vlag wordt geklikt
+> zet sleepbaar op [niet sleepbaar v]
+> +wacht tot <(pizza's) > (10000)>
+> +start geluid (Win v)
+> +zeg [Je hebt gewonnen!] (2) sec.
 > +stop [alle v]
 > ```
 
@@ -118,13 +118,13 @@ Klik op je sprite. Je scorevariabele gaat omhoog.
 
 > [!TASK]
 >
-> Klik op het `Speelveld`{:class="block3looks"} en zet de score op 0 wanneer op de groene vlag wordt geklikt.
+> Klik op het`Speelveld`{:class="block3looks"} en zet de score op 0 wanneer op de groene vlag wordt geklikt.
 >
 > ![Het speelveld selecteren, rechts van de sprite lijst.](images/select-stage.png)
 >
 > ```blocks3
 > when green flag clicked
-> set [pizza's v] to (0)
+> set [pizzas v] to (0)
 > ```
 
 > [!TASK]
